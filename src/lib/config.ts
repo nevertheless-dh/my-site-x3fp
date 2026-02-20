@@ -6,7 +6,7 @@ function parseJSON<T>(raw: string | undefined, fallback: T): T {
 }
 
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || '홍길동4',
+  name: process.env.NEXT_PUBLIC_SITE_NAME || '홍길동2',
   nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Gildong Hong',
   title: process.env.NEXT_PUBLIC_TITLE || '프리랜서 개발자',
   titleEn: process.env.NEXT_PUBLIC_TITLE_EN || 'Freelance Developer',
@@ -17,9 +17,7 @@ export const siteConfig = {
   address: process.env.NEXT_PUBLIC_ADDRESS || null,
   addressEn: process.env.NEXT_PUBLIC_ADDRESS_EN || null,
   website: process.env.NEXT_PUBLIC_WEBSITE || null,
-  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, [
-  { platform: 'linkedin', url: '123' }
-]),
+  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, []),
   avatarUrl: process.env.NEXT_PUBLIC_AVATAR_URL || null,
   accentColor: process.env.NEXT_PUBLIC_ACCENT_COLOR || '#3b82f6',
   gaId: process.env.NEXT_PUBLIC_GA_ID || null,
