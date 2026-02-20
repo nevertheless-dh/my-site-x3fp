@@ -17,7 +17,9 @@ export const siteConfig = {
   address: process.env.NEXT_PUBLIC_ADDRESS || null,
   addressEn: process.env.NEXT_PUBLIC_ADDRESS_EN || null,
   website: process.env.NEXT_PUBLIC_WEBSITE || null,
-  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, []),
+  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, [
+  { platform: 'linkedin', url: '123' }
+]),
   avatarUrl: process.env.NEXT_PUBLIC_AVATAR_URL || null,
   accentColor: process.env.NEXT_PUBLIC_ACCENT_COLOR || '#3b82f6',
   gaId: process.env.NEXT_PUBLIC_GA_ID || null,
